@@ -15,6 +15,7 @@
     "Cerys-Moon-of-Fulgora >= 4.22.4",
     "cubium >= 1.0.28",
     "? cubium-science-pack-reorder >= 1.0.0",
+    "? cerys-science-edit >= 1.0.0",
     "? science-tab >= 1.10.0"
   ],
   "space_travel_required": true

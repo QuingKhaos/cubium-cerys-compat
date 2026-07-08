@@ -3,3 +3,5 @@ Version: 1.0.0
 Date: 2026-07-08
   Features:
     - Add a cubic cerysian science pack from Cerys to Cubium.
+  Compatibility:
+    - Support renamed cerysian to radiation science pack mod.

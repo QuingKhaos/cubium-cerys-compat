@@ -69,7 +69,7 @@ for _, pack in pairs(packs) do
       :add_result {type = "item", name = "dormant-microcube", amount = 1, percent_spoiled = 0, ignored_by_productivity = 9999, show_details_in_recipe_tooltip = false}
       :commit()
 
-    khaoslib_technology.copy(pack.copy_tech, pack.cubic)
+    local tech = khaoslib_technology.copy(pack.copy_tech, pack.cubic)
       :set_icons {
         {icon = "__cubium__/graphics/technology/ultradense-technology.png", icon_size = 256},
         {icon = data.raw["technology"][pack.name].icon, icon_size = data.raw["technology"][pack.name].icon_size, scale = 0.4, shift = {1, -10}},
@@ -83,6 +83,11 @@ for _, pack in pairs(packs) do
       :add_science_pack {pack.name, 1}
       :clear_effects()
       :add_unlock_recipe(pack.cubic)
-      :commit()
+
+      if mods["cerys-science-edit"] and pack.name == "cerysian-science-pack" then
+        tech:set {localised_name = {"technology-name.cerysian-science-pack-cubic-edit"}}
+      end
+
+      tech:commit()
   end
 end
